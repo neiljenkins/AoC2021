@@ -25,6 +25,8 @@ def sliding_sum(l):
 
 if __name__ == "__main__":
 	input = pd.read_csv('input.txt', header = None).values
+	part1 = count_increases(input)
 	sums = sliding_sum(input)
-	ups = count_increases(sums)
-	print(ups)
+	part2 = count_increases(sums)
+	print(f'Part 1 solution: {part1}')
+	print(f'Part 2 solution: {part2}')
