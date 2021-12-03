@@ -1,6 +1,9 @@
 import pandas as pd
 
 def commonBit(position, l):
+    '''
+    Identify the most common bit in a given position (return 1 in case of a tie)
+    '''
     sum = 0
     for num in l:
         #print(num)
@@ -11,6 +14,9 @@ def commonBit(position, l):
         return '0'
 
 def uncommonBit(position, l):
+    '''
+    Identify the least common bit in a given position (return 0 in case of a tie)
+    '''
     sum = 0
     for num in l:
         sum += int(num[position])
@@ -20,6 +26,9 @@ def uncommonBit(position, l):
         return '0'
 
 def epsilon(l):
+    '''
+    Return the value of Epsilon from the given list
+    '''
     length = len(l[0])
     epsilonList = []
     for i in range(length):
@@ -29,6 +38,9 @@ def epsilon(l):
     return epsilon
 
 def gamma(l):
+    '''
+    Return the value of Gamma from the given list
+    '''
     length = len(l[0])
     gammaList = []
     for i in range(length):
@@ -38,6 +50,9 @@ def gamma(l):
     return gamma
 
 def oxygen(l):
+    '''
+    Return the oxygen rating from the given list
+    '''
     candidates = pd.DataFrame(l,columns=['a'])
     length = len(l[0])
     remaining = len(candidates)
@@ -50,6 +65,9 @@ def oxygen(l):
     return oxygenRating
 
 def c02(l):
+    '''
+    Return the C02 rating from the given list
+    '''
     candidates = pd.DataFrame(l,columns=['a'])
     length = len(l[0])
     remaining = len(candidates)
